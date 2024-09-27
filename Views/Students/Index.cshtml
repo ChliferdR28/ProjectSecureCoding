@@ -1,0 +1,45 @@
+﻿@model IEnumerable<ProjectSecureCoding.Models.Mahasiswa>
+
+
+@{
+    ViewData["Title"] = "Students Page";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <h1 class="text-center mb-3">Tabel Mahasiswa</h1>
+        <div class="d-flex justify-content-end">
+            <a class="btn btn-primary " asp -area="" asp-controller="Students" asp-action="Tambah">
+                <i class="bi bi-plus-square"></i>
+            </a>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">Nim</th>
+                    <th scope="col">Nama Lengkap</th>
+                    <th scope="col">Alamat</th>
+                    <th scope="col">Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{ var i = 1; }
+                @foreach (var mahasiswa in Model)
+                {
+                    <tr>
+                        <td>@i</td>
+                        <td>@mahasiswa.Nim</td>
+                        <td>@mahasiswa.Nama</td>
+                        <td>@mahasiswa.Alamat</td>
+                        <td>
+                            <a href="#" class="btn btn-primary ">Detail</a>
+                        </td>
+                    </tr>
+                     i++;
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>
