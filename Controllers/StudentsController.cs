@@ -17,6 +17,7 @@ namespace ProjectSecureCoding.Controllers
             _context = context;
         }
 
+        [HttpGet("mahasiswa")]
         public IActionResult Index()
         {
             var mahasiswa = _context.Mahasiswa.ToList();

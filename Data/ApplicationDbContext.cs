@@ -18,6 +18,7 @@ namespace ProjectSecureCoding.Data
         {
             options.UseSqlite(Configuration.GetConnectionString("DefaultConnection"));
         }
-        public DbSet<Mahasiswa> Mahasiswa { get; set; } = null!;   
+        public DbSet<Mahasiswa> Mahasiswa { get; set; } = null!; 
+        public DbSet<User> User { get; set; } = null!;  
     }
 }
